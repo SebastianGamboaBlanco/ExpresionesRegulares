@@ -1,5 +1,4 @@
 import re
-import emoji
 import os
 def Reglas():
     print("El validador de contraseña solo valida.\n ")
@@ -15,9 +14,9 @@ class ValidatePassaword():
   @staticmethod
   def validar():
       if re.search(expresion, contraseña):
-        print("\nContraseña valida \U0001f44d \U0001F604\n")
+        print("\nContraseña valida\n")
       else:
-        print("\ncontraseña invalida \U0001F44E \U0001F641\n")
+        print("\ncontraseña invalida\n")
 
 while True:
   Reglas()
@@ -26,5 +25,5 @@ while True:
   expresion='^[A-Z][0-9]{3}[a-z]+[\W]{3}$'
   validar=ValidatePassaword(contraseña,expresion)
   validar.validar()
-  input("oprima una ENTER para continuar")
+  input("oprima ENTER para continuar")
   os.system('clear')
